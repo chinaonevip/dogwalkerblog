@@ -16,7 +16,7 @@ services:
       - redis
 
   backend:
-    image: leishi1313/aurora-admin-backend:latest
+    image: dogwalker/jiguang:v0.14.1
     restart: always
     command: bash -c "while !</dev/tcp/postgres/5432; do sleep 1; done; alembic upgrade heads && python app/main.py"
     environment:
