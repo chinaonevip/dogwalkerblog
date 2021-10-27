@@ -31,10 +31,10 @@ services:
       - redis
 
   nginx:
-    image: leishi1313/aurora-admin-frontend:latest
+    image: dogwalker/jiguang:v0.14.1
     restart: always
     ports:
-      - 8000:80
+      - 8005:80
     depends_on:
       - backend
   
